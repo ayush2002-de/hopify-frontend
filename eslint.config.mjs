@@ -16,6 +16,9 @@ export default [
       settings: {
         react: { version: 'detect' },
       },
+      rules: {
+        'react/prop-types': 'off', // Disable prop-types rule for TypeScript
+      },
     },
     reactJsx,
   ]),

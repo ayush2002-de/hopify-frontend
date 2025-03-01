@@ -1,10 +1,10 @@
 import './App.css';
+import HomePage  from './pages/HomePage';
 
 const App = () => {
   return (
-    <div className="text-2xl font-medium text-sky-500">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
+    <div className="p-5">
+      <HomePage/>
     </div>
   );
 };
