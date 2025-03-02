@@ -16,6 +16,7 @@ export default function Search({ placeholder = "Search All...", onSearch }: Sear
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder={placeholder}
+        onKeyDown={(e) => e.key === "Enter" && onSearch(query)}
         className="w-full outline-none text-black px-2"
       />
       {/* Search Button */}
