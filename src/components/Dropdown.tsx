@@ -7,7 +7,7 @@ interface DropdownProps {
 }
 
 export default function Dropdown({ label, options }: DropdownProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(() => false);
 
   return (
     <div className="relative inline-block">
