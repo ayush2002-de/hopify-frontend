@@ -3,7 +3,7 @@ export const reviewDropdownOptions = [
   ];
   
   export const discoverDropdownOptions = [
-    { text: "Google", link: "https://www.google.com" },
-    { text: "Alert", onClick: () => alert("Button Clicked!") },
+    { text: "Patient Stories", link: "https://www.google.com" },
+    { text: "Patient Choices", onClick: () => alert("Button Clicked!") },
   ];
   

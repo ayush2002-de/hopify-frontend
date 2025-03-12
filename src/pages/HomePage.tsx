@@ -1,17 +1,44 @@
-import Button from '../components/Button';
-import Logo from '../components/Logo';
-import Dropdown from '../components/Dropdown';
-import Search from '../components/Search';
+import Button from "../components/Button";
+import Logo from "../components/Logo";
+import Dropdown from "../components/Dropdown";
+import Search from "../components/Search";
 import {
   reviewDropdownOptions,
   discoverDropdownOptions,
-} from '../data/dropdownData';
-import homeImage from '../assets/homImage.jpg';
-import ImageCart from '../components/Hospital';
+} from "../data/dropdownData";
+import homeImage from "../assets/homImage.jpg";
+import ImageGrid from "../components/GeneralCart";
+import hospitalImage from "../assets/hospital.jpg";
+import Location1 from "../assets/delhi.jpeg"
+import Location2 from "../assets/mumbai.jpg"
+
+
+const Hospital = [
+  { id: 1, image: hospitalImage, title: "Apollo1", description: "Hospital", link: "/hospital/apollo" ,rating: 5 },
+  { id: 2, image: hospitalImage, title: "Apollo2", description: "Hospital", link: "/hospital/apollo" , rating:3 },
+  { id: 3, image: hospitalImage, title: "Apollo3", description: "Hospital", link: "/hospital/apollo" },
+  { id: 4, image: hospitalImage, title: "Apollo4", description: "Hospital", link: "/hospital/apollo" },
+  { id: 5, image: hospitalImage, title: "Apollo5", description: "Hospital", link: "/hospital/apollo" },
+  { id: 6, image: hospitalImage, title: "Apollo6", description: "Hospital", link: "/hospital/apollo" },
+  { id: 7, image: hospitalImage, title: "Apollo7", description: "Hospital", link: "/hospital/apollo" },
+  { id: 8, image: hospitalImage, title: "Apollo8", description: "Hospital", link: "/hospital/apollo" },
+];
+
+const Location = [
+  { id: 1, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+  { id: 2, image: Location2, title: "", description: "Find Best Hospital in Mumbai", link: "/hospital/apollo" },
+  { id: 3, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+  { id: 4, image: Location2, title: "", description: "Find Best Hospital in Mumbai", link: "/hospital/apollo" },
+  { id: 5, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+  { id: 6, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+  { id: 7, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+  { id: 8, image: Location1, title: "", description: "Find Best Hospital in Delhi", link: "/hospital/apollo" },
+];
+
 
 const HomePage = () => {
   const handleSearch = (query: string) => {
-    console.log('Searching for:', query);
+    console.log("Searching for:", query);
   };
 
   return (
@@ -61,10 +88,17 @@ const HomePage = () => {
           alt="Descriptive Alt Text"
         />
       </div>
-      <div className="">
-        <h1 className="w-280"> Best hospital choices are there !</h1>
-        <ImageCart />
+      <div className="w-full max-w-6xl text-center">
+        <h1 className="text-xl font-bold mb-4 w-90">Best hospital choices are there!</h1>
+        <ImageGrid items={Hospital} />
+        <h1 className="text-xl font-bold mb-4 w-30">Places</h1>
+        <ImageGrid items={Location} />
+
       </div>
+      <footer className="w-full bg-gray-800 text-white text-center py-4 mt-10 h-50">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+      </footer>
+
     </div>
   );
 };

@@ -32,7 +32,7 @@ export default function Dropdown({ label, options }: DropdownProps) {
     <div className="relative inline-block" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center px-4 py-2 text-black bg-transparent focus:outline-none"
+        className="flex items-center px-4 py-2 text-black bg-transparent focus:outline-none cursor-pointer"
       >
         {label} <ChevronDown className="ml-2 w-4 h-4" />
       </button>
